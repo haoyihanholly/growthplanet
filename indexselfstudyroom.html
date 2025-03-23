@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/Additionforgrowthplanet.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#add {
+				width: 450px;
+				height: 80px;
+				background-color: #ffdab9;
+				color: #FFFFFF;
+				font-size: 3em;
+			}
+		</style>
+		<style>
+			button {
+				padding: 10px 20px;
+				font-size: 16px;
+				margin-right: 10px;
+			}
+
+			video {
+				margin-top: 10px;
+				border: 1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Self-study room - AI accompany & guide</h2>
+		<img src="img/成长星球2.jpg" alt="the photo is broken" width="1080" height="508" />
+		<div id="add">
+			homework guide
+		</div>
+		<button type="button" onclick="ready();">
+			<font size="5">ready</font>
+		</button>
+		<button id="openCameraBtn">打开摄像头</button>
+		<button id="closeCameraBtn">关闭摄像头</button>
+		<video id="videoElement" width="640" height="480" autoplay></video>
+
+		<script>
+			const openCameraBtn = document.getElementById('openCameraBtn');
+			const closeCameraBtn = document.getElementById('closeCameraBtn');
+			const videoElement = document.getElementById('videoElement');
+			let cameraStream;
+
+			openCameraBtn.addEventListener('click', async () => {
+				try {
+					cameraStream = await navigator.mediaDevices.getUserMedia({
+						video: true,
+						audio: false
+					});
+					videoElement.srcObject = cameraStream;
+				} catch (error) {
+					console.error('无法访问摄像头:', error);
+					alert('无法访问摄像头，请检查权限或设备连接');
+				}
+			});
+
+			closeCameraBtn.addEventListener('click', () => {
+				if (cameraStream) {
+					const tracks = cameraStream.getTracks();
+					tracks.forEach(track => track.stop());
+					videoElement.srcObject = null;
+					alert('摄像头已关闭');
+				} else {
+					alert('摄像头尚未打开');
+				}
+			});
+		</script>
+		<h3>Attention: To use the camera, browser permission must be enabled</h3>
+		<button onclick="startTimer()">开始计时</button>
+		<div id="timer-display">00:00</div>
+		<script>
+			let timer;
+			let startTime;
+			let elapsedSeconds = 0;
+
+			function startTimer() {
+				startTime = Date.now();
+				timer = setInterval(() => {
+					const now = Date.now();
+					elapsedSeconds = Math.floor((now - startTime) / 1000);
+					const minutes = String(Math.floor(elapsedSeconds / 60)).padStart(2, '0');
+					const seconds = String(elapsedSeconds % 60).padStart(2, '0');
+					document.getElementById('timer-display').textContent = `${minutes}:${seconds}`;
+				}, 1000);
+			}
+		</script>
+		<h3>Listen to light music to help you get into a learning state!</h3>
+		<h4>Ballade Pour Adeline</h4>
+		<embed height="200" width="600" src="img/PPT配乐-水边的阿狄丽娜.mp3">
+		<h4>River Flows in You</h4>
+		<embed height="200" width="600" src="img/River Flows in You.mp3">
+
+	</body>
+</html>
