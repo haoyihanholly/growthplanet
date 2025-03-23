@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width=1,initial-scale=1.0,minimum-scale=1.0">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/css/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<title></title>
+		<style>
+			.jumbotron {
+				font-family: verdana;
+				padding: 270px;
+				border-radius: 10px;
+				border: 10px solid #844d99;
+				background-image: url('img/成长星球11.jpg');
+				/* 设置背景图片路径 */
+				background-size: cover;
+				/* 让背景图片覆盖整个容器，可根据需求调整 */
+				background-position: center;
+				/* 背景图片居中显示 */
+				background-repeat: no-repeat;
+				/* 防止图片重复 */
+			}
+
+			text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="jumbotron">
+			<h1 style="font-weight: bold;color: white;">Hello, my classmate!</h1>
+			<p style="font-weight: bold;font-size:250%;color: white;">Welcome to Growth Planet!<br>Scroll down to see
+				more</p>
+			<p><a class="btn btn-primary btn-lg" href="https://m.baidu.com" role="button">Learn more</a></p>
+		</div>
+		<div id="partone">
+			<hr>
+			<h1>An introduction and guide</h1>
+			<p> 习近平总书记在2024年9月9日至10日的全国教育大会上指出，教育是强国建设、民族复兴之基，要坚持不懈实施新时代立德树人工程，而习近平在2018年的全国教育大会上就强调了家长在立德树人方面的重要性：“家庭是人生第一所学校，家长应帮助学生扣好人生第一粒扣子。”本项目调研结果显示，学生课后学习时专注力不够、效率不高、学习习惯较差，而家长缺少对孩子行为习惯、学习习惯的教育，因此需要社会对学生学习习惯养成提供帮助。然而，目前针对学生学习习惯养成的APP存在缺失，所以“成长星球”课后云陪学APP针对以上问题，拟设立AI陪学、名师答疑、计划打卡、成长辅导四个板块，打造具备智能行为识别、语音提示、AI高效批改、AI与名师相结合答疑模式及每日习惯打卡、定制化学习目标和职业成长规划、心理辅导等创新功能的一站式学习平台。在成长星球中，AI可根据家长设置的语音提醒辅助家长随时提醒学生保持好的坐姿和专注力；AI与名师互补，使答疑更高效、较家长更专业；AI可在作业批改的同时生成学习报告，使家长了解学生学习情况；职业成长规划帮助学生走过各重要节点的“最后一公里”，为家长“减负”；心理辅导助力学生身心健康发展，促进家庭关系和睦。
+			</p>
+			<h2>APP icon - your cozy growth planet</h2>
+			<img src="img/成长星球APP图标.jpg" alt="the photo is broken" width="508" height="508" />
+			<h2>Start up picture</h2>
+			<img src="img/成长星球1副本.jpg" alt="the photo is broken" width="1080" height="508" />
+			<h2 style="font-size:30px">Function Introduction</h2>
+			<h2>Click to view!</h2>
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" class="active"><a href="indexselfstudyroom.html">Self-study room</a></li>
+				<li role="presentation"><a href="indexlighthouse.html">Lighthouse</a></li>
+				<li role="presentation"><a href="indexspiritbank.html">Spirit bank</a></li>
+				<li role="presentation"><a href="indexknowledgecakeshop.html">Knowledge cake shop</a></li>
+				<li role="presentation"><a href="indexmyhome.html">My home</a></li>
+			</ul>
+			<script src="js/Additionforgrowthplanet.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+				function showme() {
+					window.open("https://www.doubao.com/chat/");
+					alert("let's study!");
+				}
+			</script>
+			<button type="button" onclick="showme();">
+				<font size="5">search</font>
+			</button>
+	</body>
+</html>
