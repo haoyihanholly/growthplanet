@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<h2>Knowledge cake shop - online class</h2>
+		<h3>Learning is a piece of cake!</h3>
+		<img src="img/成长星球5.jpg" alt="the photo is broken" width="1080" height="508" />
+		<script type="text/javascript">
+			function onlcla() {
+				window.open(
+					"https://www.bilibili.com/video/BV1h7pteyEww/?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click"
+				);
+				alert("let's study!");
+			}
+		</script>
+		<button type="button" onclick="onlcla();">
+			<font size="5">a math class</font>
+		</button>
+	</body>
+</html>
